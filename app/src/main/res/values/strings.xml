@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Question Answering</string>\
     <string name="question_answer_covid">Question Answer Covid-19!</string>
-    <string name="pertanyaan">Pertanyaan</string>
+    <string name="pertanyaan">Tanya</string>
     <string name="jawaban">Jawaban</string>
     <string name="tulis_pertanyaan">Tulis pertanyaan...</string>
     <string name="masukan_pertanyaan">Masukan pertanyaan terlebih dahulu</string>
