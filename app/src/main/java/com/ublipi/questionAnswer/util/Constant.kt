@@ -5,5 +5,6 @@ object Constant {
 
 //    const val BASE_URL = "https://api.com/"
     const val BASE_URL = "https://shielded-springs-75698.herokuapp.com/"
+    const val MY_ID = 1
 
 }

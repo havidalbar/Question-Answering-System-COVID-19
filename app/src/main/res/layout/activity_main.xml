@@ -19,6 +19,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/testasd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -79,96 +80,12 @@
             android:layout_marginBottom="32dp"
             android:orientation="vertical"
             android:paddingHorizontal="32dp"
-            android:paddingBottom="32dp">
+            android:paddingVertical="16dp">
 
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="144dp"
-                android:layout_height="8dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/handle"/>
-
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/jawaban"
-                android:textSize="16sp"
-                android:layout_marginTop="16dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorText"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="@android:color/darker_gray" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/tipe_jawaban"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_answer_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorText"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="@android:color/darker_gray" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/kata_kunci"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_key_words"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorText"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="@android:color/darker_gray" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/kalimat_terkait"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_result_sentence"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorText"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
