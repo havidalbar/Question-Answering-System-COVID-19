@@ -73,6 +73,7 @@ class QaActivity : AppCompatActivity() {
 
     private fun collapseBottomSheet() {
         bottomSheetBehaviour.peekHeight = 187
+        bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
     }
 
     override fun onBackPressed() {
