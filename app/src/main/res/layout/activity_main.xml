@@ -74,6 +74,7 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,6 +82,19 @@
             android:orientation="vertical"
             android:paddingHorizontal="32dp"
             android:paddingVertical="16dp">
+
+            <TextView
+                android:background="@drawable/button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:paddingVertical="16dp"
+                android:textAlignment="center"
+                android:iconifiedByDefault="false"
+                android:layout_marginBottom="19dp"
+                android:paddingHorizontal="12dp"
+                android:text="@string/jawaban"
+                android:textColor="@android:color/white" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvChat"

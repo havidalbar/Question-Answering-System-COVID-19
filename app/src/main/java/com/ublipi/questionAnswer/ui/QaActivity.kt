@@ -28,7 +28,6 @@ class QaActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initView()
         observeLiveData()
     }
@@ -70,11 +69,14 @@ class QaActivity : AppCompatActivity() {
     }
 
     private fun expandBottomSheet() {
+        bottomSheetBehaviour.peekHeight = 187;
         bottomSheetBehaviour.state = BottomSheetBehavior.STATE_EXPANDED
     }
 
     private fun collapseBottomSheet() {
-        bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
+        bottomSheetBehaviour.peekHeight = 187;
+//        bottomSheetBehaviour.setPeekHeight(187)
+//        bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
     }
 
     override fun onBackPressed() {
