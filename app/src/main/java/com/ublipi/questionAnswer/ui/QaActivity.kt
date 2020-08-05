@@ -25,7 +25,6 @@ class QaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initView()
@@ -38,7 +37,6 @@ class QaActivity : AppCompatActivity() {
             btnTanya.setOnClickListener { ask(MY_ID) }
             testasd.setOnClickListener { ask(2) }
             layoutContent.setOnClickListener { collapseBottomSheet() }
-
             rvChat.layoutManager = LinearLayoutManager(this@QaActivity)
             adapter = ChatAdapter(this@QaActivity)
             rvChat.adapter = adapter
@@ -69,14 +67,12 @@ class QaActivity : AppCompatActivity() {
     }
 
     private fun expandBottomSheet() {
-        bottomSheetBehaviour.peekHeight = 187;
+        bottomSheetBehaviour.peekHeight = 187
         bottomSheetBehaviour.state = BottomSheetBehavior.STATE_EXPANDED
     }
 
     private fun collapseBottomSheet() {
-        bottomSheetBehaviour.peekHeight = 187;
-//        bottomSheetBehaviour.setPeekHeight(187)
-//        bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
+        bottomSheetBehaviour.peekHeight = 187
     }
 
     override fun onBackPressed() {
