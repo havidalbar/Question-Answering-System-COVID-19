@@ -8,10 +8,10 @@ import retrofit2.http.Query
 @JvmSuppressWildcards
 interface Api {
 
-    @GET("soekarno/ask")
+    @GET("/")
     fun getAnswers(
         @Query(
-            value = "query",
+            value = "q",
             encoded = true
         ) query: String
     ): Observable<AnswerResponse>

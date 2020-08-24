@@ -12,6 +12,7 @@ import com.ublipi.questionAnswer.databinding.ActivityMainBinding
 import com.ublipi.questionAnswer.ui.adapter.ChatAdapter
 import com.ublipi.questionAnswer.util.Constant.MY_ID
 import com.ublipi.questionAnswer.util.hide
+import com.ublipi.questionAnswer.util.show
 import com.ublipi.questionAnswer.util.snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -51,6 +52,7 @@ class QaActivity : AppCompatActivity() {
     }
 
     private fun onDataLoaded(answer: Answer) {
+        adapter.addAnswers(answer)
         progressBar.hide()
         expandBottomSheet()
     }
@@ -58,10 +60,10 @@ class QaActivity : AppCompatActivity() {
     private fun ask(a: Int) {
         val question: String = edt_input.text.toString()
         if (question.isEmpty().not()) {
-//            viewModel.getAnswer(question)
+            progressBar.show()
             edt_input.setText("")
             adapter.addAnswers(Answer(question, a))
-            expandBottomSheet()
+            viewModel.getAnswer(question)
         } else {
             layout_content.snackbar(getString(R.string.masukan_pertanyaan))
         }
