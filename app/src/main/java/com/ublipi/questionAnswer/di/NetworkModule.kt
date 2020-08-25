@@ -21,6 +21,7 @@ val networkModule = module {
                 HttpLoggingInterceptor()
                     .setLevel(HttpLoggingInterceptor.Level.BODY)
             )
+            .retryOnConnectionFailure(true)
             .build()
     }
 

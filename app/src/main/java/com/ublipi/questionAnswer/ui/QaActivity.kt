@@ -1,6 +1,7 @@
 package com.ublipi.questionAnswer.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -52,9 +53,11 @@ class QaActivity : AppCompatActivity() {
     }
 
     private fun onDataLoaded(answer: Answer) {
-        adapter.addAnswers(answer)
+        if(answer!=null) {
+            adapter.addAnswers(answer)
+        }
         progressBar.hide()
-        expandBottomSheet()
+        //expandBottomSheet()
     }
 
     private fun ask(a: Int) {
@@ -62,7 +65,8 @@ class QaActivity : AppCompatActivity() {
         if (question.isEmpty().not()) {
             progressBar.show()
             edt_input.setText("")
-            adapter.addAnswers(Answer(question, a))
+            adapter.addAnswers(Answer(question,0,0.0,0,a))
+            expandBottomSheet()
             viewModel.getAnswer(question)
         } else {
             layout_content.snackbar(getString(R.string.masukan_pertanyaan))
